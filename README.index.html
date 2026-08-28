@@ -1,104 +1,287 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="index.css" rel="stylesheet"/>
-    <title>Rey Salazar CV</title>
+    <title>Rey Salazar - CV</title>
+    <style>
+        /* Estilos generales de la página */
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #2c3e50;
+            line-height: 1.6;
+            font-size: 16px;
+            margin: 0;
+            padding: 40px 20px;
+            background-color: #f4f7f6; /* Fondo gris claro para resaltar la "hoja" del CV */
+        }
+        
+        /* Contenedor principal que simula la hoja A4 */
+        .cv-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 50px 60px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-radius: 8px;
+        }
+        
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        
+        /* Cabecera */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 36px;
+            color: #1a252f;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        .subtitle {
+            font-size: 20px;
+            color: #2980b9;
+            font-weight: 600;
+            margin: 10px 0 15px 0;
+        }
+        .contact-info {
+            font-size: 15px;
+            color: #555;
+        }
+        .contact-info span {
+            margin: 0 5px;
+            color: #ccc;
+        }
+        .contact-info a {
+            color: #2980b9;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact-info a:hover {
+            color: #1a252f;
+            text-decoration: underline;
+        }
+        
+        /* Secciones y Títulos */
+        h2 {
+            font-size: 22px;
+            color: #1a252f;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        p {
+            margin: 0 0 15px 0;
+            text-align: justify;
+        }
+        
+        /* Experiencia Profesional */
+        .experience-item {
+            margin-bottom: 30px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        .job-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a252f;
+        }
+        .company-info {
+            font-size: 16px;
+            font-style: italic;
+            color: #34495e;
+            margin-top: 4px;
+        }
+        .dates {
+            font-size: 15px;
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+        
+        /* Listas */
+        ul {
+            margin: 0 0 15px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+            text-align: left;
+        }
+        
+        /* Habilidades */
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills-list li {
+            margin-bottom: 12px;
+        }
+        .skill-category {
+            font-weight: bold;
+            color: #2980b9;
+        }
+        
+        /* Educación */
+        .education-item {
+            margin-bottom: 25px;
+        }
+        .edu-title {
+            font-weight: bold;
+            font-size: 17px;
+            color: #1a252f;
+        }
+        .edu-details {
+            font-style: italic;
+            color: #34495e;
+            margin-bottom: 5px;
+            margin-top: 3px;
+        }
+        
+        /* Responsive: Ajustes para celulares */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .cv-container {
+                padding: 30px 20px;
+            }
+            .job-header {
+                flex-direction: column;
+            }
+            .dates {
+                margin-top: 5px;
+                font-size: 14px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            .contact-info span {
+                display: none;
+            }
+            .contact-info a, .contact-info {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
 </head>
-<body class="row align-items-center justify-content-center vh-100 p-5">
-        <section class="home p-5">
-            <div class="datos in-flex border p-5 ">
-                <img class="profile text-center" src="img/foto.jpg" height="250px" width="250px"/>
-                <br><br>
-                <h4 class="datos text-center">REY SALAZAR</h4>
-                <p class="datos text-center">JAVA DEVELOPER</p>
-                <br>
-                <br>
-                <h4 class="datos">PERFIL</h4>
-                <p class="datos">
-                    Mi mayor experiencia es el
-                    desarrollo de aplicaciones web en
-                    Java. Académicamente realice
-                    proyectos con el stack MERN.
-                </p>
-                <p class="datos">
-                    Mi objetivo es el de conseguir un
-                    trabajo en el área de desarrollo de
-                    software con la posibilidad de
-                    aprender tecnologías nuevas.
-                    Busco un trabajo que me motive a
-                    aprender constantemente.
-                </p>
-                <br>
-                <h4 class="datos">CONTACTO</h4>
-                <p class="datos">
-                <a  class="datos" href="tel:+5491169125071">1169125071</a><br>
-                <a  class="datos" href="mailto:rey.salazar.dfs@gmail.com">rey.salazar.dfs@gmail.com</a></p>
-                <br>
-                <h4 class="datos">SOCIAL</h4>
-                <a class="red in" href="https://www.linkedin.com/in/rey-salazar/" target="_blank"></a>
-                <a class="red git" href="https://github.com/ReySalazar" target="_blank"></a>
+<body>
+
+    <div class="cv-container">
+        <!-- Cabecera -->
+        <div class="header">
+            <h1>Rey Salazar</h1>
+            <div class="subtitle">Backend Software Engineer</div>
+            <div class="contact-info">
+                Buenos Aires, Argentina <span>|</span> 
+                <a href="mailto:rey.salazar.dfs@gmail.com">rey.salazar.dfs@gmail.com</a> <span>|</span> 
+                +54 1169125071 <span>|</span> 
+                <a href="https://linkedin.com/in/rey-salazar/" target="_blank">linkedin.com/in/rey-salazar/</a>
             </div>
-            <div class="in-flex border p-5">
+        </div>
+
+        <!-- Perfil Profesional -->
+        <h2>Perfil Profesional</h2>
+        <p>Backend Software Engineer con más de 4 años de experiencia en desarrollo de software, especializado en Java, Spring Boot, Google Cloud Platform (GCP) e integraciones de sistemas. Cuento con experiencia en la evolución de servicios para el procesamiento masivo de publicaciones inmobiliarias (alcanzando 8,5 millones de publicaciones en Brasil), trabajando con APIs REST y archivos XML de gran volumen. Sólido manejo de GCP, contenedores (Kubernetes/GKE), ETLs, testing automatizado y resolución de incidentes, siempre con foco en la escalabilidad y confiabilidad. Durante el último año, he integrado herramientas de IA generativa (Cursor, Claude, Gemini) al ciclo de desarrollo para automatizar tareas, junto con investigaciones en enfoques de Agentic Development.</p>
+
+        <!-- Experiencia Profesional -->
+        <h2>Experiencia Profesional</h2>
+        
+        <div class="experience-item">
+            <div class="job-header">
                 <div>
-                    <h3 >EXPERIENCIA LABORAL</h3>
-                    <hr size="7px" />
-                    <h4>NAVENT | QUINTO ANDAR GROUP</h4>
-                    <h5>ABRIL 2022 - ACTUALIDAD</h5>
-                    <br>
-                    <p>BACKEND JAVA DEVELOPER</p>
-                    <p>Desarrollo evolutivo de aplicaciones del portal Zonaprop, siendo Java el principal lenguaje de desarrollo backend</p>
-                    </p>
+                    <span class="job-title">Backend Java Developer SSR</span><br>
+                    <div class="company-info">Grupo QuintoAndar</div>
                 </div>
-                <div>
-                    <br>
-                    <br>
-                    <h3>EDUCACIÓN</h3>
-                    <hr size="7px" />
-                    <h5>UNIVERSIDAD TECNOLÓGICA NACIONAL</h5>
-                    <h6>TECNICATURA SUPERIOR EN INFORMÁTICA APLICADA</h6>
-                    <h6>2019-2022</h6>
-                    <br>
-                    <p>Desarrollo, mantenimiento y programación de sistemas informáticos.<br>Administrar recursos informáticos en centros de cómputos.</p>
-                </div>
-                <div>
-                    <br>
-                    <br>
-                    <h4>ESTUDIOS COMPLEMENTARIOS</h4>
-                    <hr size="7px" />
-                    <p>2020 | Curso de Java - Codo a codo<br>2019 | Java Web - Educación IT.<br>2019 | Java Hibernate - Educación IT.
-                    <br>2018 | Diseño web Javascript - Aprender programando.<br>2016 | Sistemas Operativos y Redes - UTN.</p>
-                </div>
-                <div>
-                    <br>
-                    <br>
-                    <h3>TECNOLÓGIAS</h3>
-                    <hr size="7px" />
-                    <div class="row">
-                        <div class="col-6">
-                            <ul>
-                                <li>Java 8-11.</li>
-                                <li>Java Spring.</li>
-                                <li>Java Hibernate.</li>
-                                <li>Gradle.</li>
-                                <li>GCP.</li>
-                            </ul>
-                        </div>
-                        <div class="col-6">
-                            <ul>
-                                <li>Maven.</li>
-                                <li>Rest.</li>
-                                <li>Git.</li>
-                                <li>Stack MERN.</li>
-                                <li>Jira</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <div class="dates">Octubre 2023 - Agosto 2026 Remoto</div>
             </div>
-        </section>
+            <ul>
+                <li>Desarrollo y evolución de servicios backend utilizando Java, Spring Boot y Gradle dentro del equipo responsable de las integraciones de publicaciones inmobiliarias.</li>
+                <li>Diseño, implementación y mantenimiento de integraciones mediante APIs REST y archivos XML de gran volumen, conectando publicaciones provenientes de integradores, CRM y brokers con distintos portales inmobiliarios de Latinoamérica.</li>
+                <li>Desarrollo y despliegue de servicios sobre Google Cloud Platform (GCP) utilizando GKE, Pub/Sub, Cloud Batch, Workflows, Cloud Storage, Cloud Build y Cloud Scheduler.</li>
+                <li>Trabajo diario con contenedores y Kubernetes, principalmente orientado al despliegue y operación de los servicios mediante GKE.</li>
+                <li>Participación en sistemas de procesamiento masivo de información, alcanzando aproximadamente 8,5 millones de publicaciones en la operación de Brasil.</li>
+                <li>Implementación de mejoras orientadas a rendimiento, escalabilidad, estabilidad y confiabilidad de procesos críticos para el negocio.</li>
+                <li>Desarrollo y mantenimiento de ETLs para procesamiento y transformación de información.</li>
+                <li>Implementación y mantenimiento de tests automatizados utilizando JUnit, Mockito y Testcontainers.</li>
+                <li>Creación y mantenimiento de dashboards, métricas y alertas en Grafana, junto con herramientas de observabilidad como New Relic.</li>
+                <li>Análisis y resolución de incidentes y bugs, participando en la identificación de causas y aplicación de soluciones.</li>
+                <li>Participación en el despliegue y puesta en producción de las aplicaciones gestionadas por el equipo de Integraciones.</li>
+                <li>Incorporación progresiva de herramientas de IA generativa al workflow de desarrollo, utilizando versiones Enterprise de Cursor, Claude y Gemini para asistencia en coding, investigación y análisis técnico.</li>
+                <li>Creación de skills y automatizaciones basadas en IA para asistir en tareas como generación de releases, Pull Request Reviews y generación de Pull Requests.</li>
+                <li>Participación en la investigación de Agentic Development, explorando posibles aplicaciones de agentes y workflows agentic dentro de los repositorios y servicios del equipo.</li>
+                <li>Utilización de GitHub para control de versiones y colaboración sobre el código.</li>
+                <li>Trabajo bajo metodologías ágiles, utilizando JIRA para la gestión y seguimiento del trabajo.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Backend Java Developer Junior</span><br>
+                    <div class="company-info">Grupo QuintoAndar</div>
+                </div>
+                <div class="dates">Abril 2022 - Noviembre 2023 Remoto</div>
+            </div>
+            <ul>
+                <li>Desarrollo y mantenimiento de aplicaciones backend utilizando Java, Spring Boot y Gradle.</li>
+                <li>Implementación y mantenimiento de integraciones mediante APIs REST y archivos XML, procesando publicaciones inmobiliarias provenientes de distintos integradores y clientes.</li>
+                <li>Participación en procesos orientados al procesamiento masivo de información, contribuyendo a la estabilidad y eficiencia de las integraciones.</li>
+                <li>Desarrollo y despliegue de servicios sobre Google Cloud Platform (GCP).</li>
+                <li>Participación en soluciones utilizando servicios como GKE, Pub/Sub, Cloud Storage, Cloud Scheduler y Cloud Build.</li>
+                <li>Trabajo con contenedores y Kubernetes/GKE para el despliegue de los servicios del equipo.</li>
+                <li>Implementación de tests automatizados utilizando JUnit, Mockito y Testcontainers.</li>
+                <li>Desarrollo de métricas, dashboards y alertas en Grafana para mejorar la observabilidad de los servicios.</li>
+                <li>Participación en la creación y mantenimiento de procesos ETL.</li>
+                <li>Análisis y resolución de bugs e incidentes, colaborando en la identificación de causas y aplicación de soluciones.</li>
+                <li>Utilización de GitHub para control de versiones y colaboración.</li>
+                <li>Trabajo bajo metodologías ágiles, utilizando JIRA.</li>
+            </ul>
+        </div>
+
+        <!-- Habilidades Técnicas -->
+        <h2>Habilidades Técnicas</h2>
+        <ul class="skills-list">
+            <li><span class="skill-category">Backend:</span> Java, Spring Boot, APIs REST, XML, Gradle.</li>
+            <li><span class="skill-category">Cloud e Infraestructura:</span> Google Cloud Platform (GCP), GKE, Kubernetes, Docker, Pub/Sub, Cloud Batch, Workflows, Cloud Storage, Cloud Build.</li>
+            <li><span class="skill-category">Bases de Datos y Testing:</span> MySQL, SQL, BigQuery, ETL, JUnit, Mockito, Testcontainers.</li>
+            <li><span class="skill-category">Observabilidad y Herramientas:</span> Grafana, New Relic, Git, GitHub, JIRA, Metodologías Ágiles.</li>
+            <li><span class="skill-category">IA Aplicada:</span> Cursor, Claude, Gemini, Prompt Engineering, Agentic Development.</li>
+        </ul>
+
+        <!-- Educación y Formación -->
+        <h2>Educación y Formación</h2>
+        <div class="education-item">
+            <div class="edu-title">Universidad Tecnológica Nacional (UTN)</div>
+            <div class="edu-details">Tecnicatura Superior en Informática Aplicada | Marzo 2019 - Diciembre 2022</div>
+            <ul>
+                <li>Carrera de 3 años completada. Título en trámite.</li>
+            </ul>
+        </div>
+        
+        <div class="education-item">
+            <div class="edu-title">Formación Complementaria</div>
+            <ul>
+                <li>Desarrollador Full Stack - Ministerio de Educación, GCBA (2020).</li>
+                <li>Cursos de Java Web y Java Hibernate - Educación IT.</li>
+            </ul>
+        </div>
+
+        <!-- Idiomas -->
+        <h2>Idiomas</h2>
+        <p><strong>Español:</strong> Nativo &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Inglés:</strong> Básico</p>
+    </div>
+
 </body>
 </html>
-
