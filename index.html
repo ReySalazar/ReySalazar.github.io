@@ -5,25 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rey Salazar - CV</title>
     <style>
-        /* Estilos generales de la página */
+        @page {
+            size: A4;
+            margin: 1.5cm 1.5cm;
+        }
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             color: #2c3e50;
-            line-height: 1.6;
-            font-size: 16px;
+            line-height: 1.5;
+            font-size: 14px;
             margin: 0;
-            padding: 40px 20px;
-            background-color: #f4f7f6; /* Fondo gris claro para resaltar la "hoja" del CV */
+            padding: 0; 
+            background-color: #fff;
         }
         
-        /* Contenedor principal que simula la hoja A4 */
         .cv-container {
-            max-width: 850px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 50px 60px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border-radius: 8px;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
         }
         
         *, *::before, *::after {
@@ -33,24 +32,25 @@
         /* Cabecera */
         .header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         h1 {
-            font-size: 36px;
+            font-size: 32px;
             color: #1a252f;
             margin: 0;
             text-transform: uppercase;
             letter-spacing: 1.5px;
         }
         .subtitle {
-            font-size: 20px;
+            font-size: 18px;
             color: #2980b9;
             font-weight: 600;
-            margin: 10px 0 15px 0;
+            margin: 5px 0 10px 0;
         }
         .contact-info {
-            font-size: 15px;
+            font-size: 14px;
             color: #555;
+            white-space: nowrap; 
         }
         .contact-info span {
             margin: 0 5px;
@@ -59,64 +59,59 @@
         .contact-info a {
             color: #2980b9;
             text-decoration: none;
-            transition: color 0.2s;
-        }
-        .contact-info a:hover {
-            color: #1a252f;
-            text-decoration: underline;
         }
         
         /* Secciones y Títulos */
         h2 {
-            font-size: 22px;
+            font-size: 18px;
             color: #1a252f;
             border-bottom: 2px solid #2980b9;
-            padding-bottom: 8px;
-            margin-top: 40px;
-            margin-bottom: 20px;
+            padding-bottom: 4px;
+            margin-top: 25px;
+            margin-bottom: 15px;
             text-transform: uppercase;
         }
         p {
-            margin: 0 0 15px 0;
+            margin: 0 0 10px 0;
             text-align: justify;
         }
         
         /* Experiencia Profesional */
         .experience-item {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         .job-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .job-title {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             color: #1a252f;
         }
         .company-info {
-            font-size: 16px;
+            font-size: 15px;
             font-style: italic;
             color: #34495e;
-            margin-top: 4px;
+            margin-left: 5px;
         }
         .dates {
-            font-size: 15px;
+            font-size: 14px;
             color: #7f8c8d;
             font-weight: 500;
+            text-align: right;
         }
         
         /* Listas */
         ul {
-            margin: 0 0 15px 0;
+            margin: 0 0 10px 0;
             padding-left: 20px;
         }
         li {
-            margin-bottom: 8px;
-            text-align: left;
+            margin-bottom: 6px;
+            text-align: justify;
         }
         
         /* Habilidades */
@@ -125,7 +120,7 @@
             padding: 0;
         }
         .skills-list li {
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
         .skill-category {
             font-weight: bold;
@@ -134,50 +129,53 @@
         
         /* Educación */
         .education-item {
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
         .edu-title {
             font-weight: bold;
-            font-size: 17px;
+            font-size: 15px;
             color: #1a252f;
         }
         .edu-details {
             font-style: italic;
             color: #34495e;
-            margin-bottom: 5px;
-            margin-top: 3px;
+            margin-bottom: 4px;
+            margin-top: 2px;
+        }
+
+        /* ----- ESTILOS DEL BOTÓN DE DESCARGA ----- */
+        .download-section {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #2980b9;
+            color: #ffffff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 15px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+        .download-btn:hover {
+            background-color: #1a252f;
+            color: #ffffff;
+            transform: translateY(-1px);
         }
         
-        /* Responsive: Ajustes para celulares */
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            .cv-container {
-                padding: 30px 20px;
-            }
-            .job-header {
-                flex-direction: column;
-            }
-            .dates {
-                margin-top: 5px;
-                font-size: 14px;
-            }
-            h1 {
-                font-size: 28px;
-            }
-            .contact-info span {
-                display: none;
-            }
-            .contact-info a, .contact-info {
-                display: block;
-                margin-bottom: 5px;
+        /* MUY IMPORTANTE: Ocultar el botón al momento de imprimir o generar el PDF */
+        @media print {
+            .download-section {
+                display: none !important;
             }
         }
     </style>
 </head>
 <body>
-
     <div class="cv-container">
         <!-- Cabecera -->
         <div class="header">
@@ -201,36 +199,35 @@
         <div class="experience-item">
             <div class="job-header">
                 <div>
-                    <span class="job-title">Backend Java Developer SSR</span><br>
-                    <div class="company-info">Grupo QuintoAndar</div>
+                    <span class="job-title">Backend Java Developer SSR</span>
+                    <span class="company-info"> - Grupo QuintoAndar</span>
                 </div>
                 <div class="dates">Octubre 2023 - Agosto 2026 Remoto</div>
             </div>
             <ul>
-                <li>Desarrollo y evolución de servicios backend utilizando Java, Spring Boot y Gradle dentro del equipo responsable de las integraciones de publicaciones inmobiliarias.</li>
+                <li>Desarrollo y evolución end-to-end de servicios backend en Java, Spring Boot y GCP, orientados a integraciones y procesamiento masivo de publicaciones inmobiliarias.</li>
                 <li>Diseño, implementación y mantenimiento de integraciones mediante APIs REST y archivos XML de gran volumen, conectando publicaciones provenientes de integradores, CRM y brokers con distintos portales inmobiliarios de Latinoamérica.</li>
-                <li>Desarrollo y despliegue de servicios sobre Google Cloud Platform (GCP) utilizando GKE, Pub/Sub, Cloud Batch, Workflows, Cloud Storage, Cloud Build y Cloud Scheduler.</li>
-                <li>Trabajo diario con contenedores y Kubernetes, principalmente orientado al despliegue y operación de los servicios mediante GKE.</li>
-                <li>Participación en sistemas de procesamiento masivo de información, alcanzando aproximadamente 8,5 millones de publicaciones en la operación de Brasil.</li>
-                <li>Implementación de mejoras orientadas a rendimiento, escalabilidad, estabilidad y confiabilidad de procesos críticos para el negocio.</li>
-                <li>Desarrollo y mantenimiento de ETLs para procesamiento y transformación de información.</li>
-                <li>Implementación y mantenimiento de tests automatizados utilizando JUnit, Mockito y Testcontainers.</li>
-                <li>Creación y mantenimiento de dashboards, métricas y alertas en Grafana, junto con herramientas de observabilidad como New Relic.</li>
-                <li>Análisis y resolución de incidentes y bugs, participando en la identificación de causas y aplicación de soluciones.</li>
+                <li>Participación en una plataforma de procesamiento masivo que gestiona aproximadamente 9,5 millones de avisos por día, con casi 290 millones de items procesados al mes, utilizando flujos asíncronos y servicios distribuidos.</li>
+                <li>Procesamiento de aproximadamente 50.000 archivos XML diarios, formando parte de una infraestructura crítica para el flujo de publicaciones inmobiliarias.</li>
+                <li>Trabajo sobre un servicio asíncrono de procesamiento de imágenes, con un volumen de aproximadamente 40 millones de transacciones a la semana, alcanzando un promedio cercano a 5,8 millones por día.</li>
+                <li>Mantenimiento y optimización del servicio de imágenes, incluyendo análisis de performance, investigación de incidencias y resolución de problemas en producción.</li>
+                <li>Implementación y análisis de throughput, latencia y percentiles (P50/P95/P99) mediante Grafana y New Relic, utilizando métricas, dashboards y alertas para detectar degradaciones, investigar incidentes y orientar optimizaciones.</li>
+                <li>Uso de Google Cloud Platform (GCP), Kubernetes/GKE, Pub/Sub, Cloud Batch, Workflows, Cloud Storage, Cloud Build y Cloud Scheduler.</li>
                 <li>Participación en el despliegue y puesta en producción de las aplicaciones gestionadas por el equipo de Integraciones.</li>
-                <li>Incorporación progresiva de herramientas de IA generativa al workflow de desarrollo, utilizando versiones Enterprise de Cursor, Claude y Gemini para asistencia en coding, investigación y análisis técnico.</li>
-                <li>Creación de skills y automatizaciones basadas en IA para asistir en tareas como generación de releases, Pull Request Reviews y generación de Pull Requests.</li>
-                <li>Participación en la investigación de Agentic Development, explorando posibles aplicaciones de agentes y workflows agentic dentro de los repositorios y servicios del equipo.</li>
+                <li>Desarrollo de ETLs, optimizaciones de procesamiento y análisis de incidentes orientados a mejorar estabilidad, rendimiento y confiabilidad.</li>
+                <li>Implementación y mantenimiento de tests automatizados utilizando JUnit, Mockito y Testcontainers.</li>
+                <li>Análisis y resolución de incidentes y bugs reportados por soporte de producto, participando en la identificación de causas y aplicación de soluciones.</li>
                 <li>Utilización de GitHub para control de versiones y colaboración sobre el código.</li>
                 <li>Trabajo bajo metodologías ágiles, utilizando JIRA para la gestión y seguimiento del trabajo.</li>
+                <li>Durante el último año, incorporación de IA generativa al workflow de desarrollo, utilizando Cursor, Claude y Gemini Enterprise para investigación, análisis y desarrollo, además de creación de automatizaciones/skills para tareas como generación de releases y soporte en revisiones de PR.</li>
             </ul>
         </div>
 
         <div class="experience-item">
             <div class="job-header">
                 <div>
-                    <span class="job-title">Backend Java Developer Junior</span><br>
-                    <div class="company-info">Grupo QuintoAndar</div>
+                    <span class="job-title">Backend Java Developer Junior</span>
+                    <span class="company-info"> - Grupo QuintoAndar</span>
                 </div>
                 <div class="dates">Abril 2022 - Noviembre 2023 Remoto</div>
             </div>
@@ -281,7 +278,11 @@
         <!-- Idiomas -->
         <h2>Idiomas</h2>
         <p><strong>Español:</strong> Nativo &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Inglés:</strong> Básico</p>
-    </div>
 
+        <!-- Botón de Descarga PDF -->
+        <div class="download-section">
+            <a href="CV_Rey_Salazar.pdf" class="download-btn" download>📥 Descargar versión PDF</a>
+        </div>
+    </div>
 </body>
 </html>
