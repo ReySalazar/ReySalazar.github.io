@@ -9,20 +9,23 @@
             size: A4;
             margin: 1.5cm 1.5cm;
         }
+        
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             color: #2c3e50;
             line-height: 1.5;
             font-size: 14px;
             margin: 0;
-            padding: 0; 
-            background-color: #fff;
+            padding: 30px 15px; /* Espacio alrededor de la hoja en la web */
+            background-color: #f0f2f5; /* Fondo gris claro para que la hoja resalte */
         }
         
         .cv-container {
-            max-width: 100%;
-            margin: 0;
-            padding: 0;
+            max-width: 850px; /* Limita el ancho al tamaño aproximado de un A4 */
+            margin: 0 auto; /* Centra el contenedor horizontalmente */
+            padding: 50px 60px; /* Simula los márgenes blancos internos del PDF */
+            background-color: #ffffff; /* El color blanco de la "hoja" */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra sutil para dar efecto de documento físico */
         }
         
         *, *::before, *::after {
